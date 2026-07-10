@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Health Freak Cafe | Ultimate Fitness Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header-fixed">
+        <div class="navbar-container">
+            <div class="logo" onclick="showAllSections();" style="cursor: pointer;">
+                <img src="logo.png" alt="Health Freak Cafe">
+            </div>
+            <nav class="nav-links">
+                <a href="#home" class="nav-link-item" onclick="switchView('home')">Home</a>
+                <a href="#about" class="nav-link-item" onclick="switchView('about')">About & Chefs</a>
+                <a href="#menu" class="nav-link-item" onclick="switchView('menu')">Mega Menu</a>
+                <a href="#catering" class="nav-link-item" onclick="switchView('catering')">Catering</a>
+                <a href="#gallery" class="nav-link-item" onclick="switchView('gallery')">Gallery & Blogs</a>
+                <a href="#tracking" class="nav-link-item" onclick="switchView('tracking')">Live Tracker</a>
+                <a href="#contact" class="nav-link-item" onclick="switchView('contact')">Contact & Booking</a>
+            </nav>
+            <div class="action-btn">
+                <a href="#contact" class="btn-primary" onclick="switchView('contact')">Book Table</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="app-view-container">
+
+        <section id="home" class="hero-section app-section">
+            <div class="bg-carousel">
+                <div class="slide active"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)), url('interior.jpg');">
+                </div>
+                <div class="slide"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1600');">
+                </div>
+                <div class="slide"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1600');">
+                </div>
+                <div class="slide"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1600');">
+                </div>
+            </div>
+            <div class="hero-container scroll-reveal">
+                <h1 class="glow-text">THE BEST PLACE TO KICK START YOUR DAY</h1>
+                <p>Premium High-Protein Micro Tracked Meals Designed Formally For True Fitness Freaks.</p>
+                <div class="hero-cta-box">
+                    <a href="#menu" class="btn-primary" onclick="switchView('menu')">Explore Mega Menu</a>
+                    <a href="#tracking" class="btn-secondary" onclick="switchView('tracking')">Simulation Terminal</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section global-bg app-section">
+            <div class="about-grid scroll-reveal">
+                <div class="about-text">
+                    <span class="tagline">ABOUT HEALTH FREAK CAFE</span>
+                    <h2>Crafting Nutrition Engineered Masterpieces</h2>
+                    <p>We blend accurate metabolic macro distribution formulas with luxury dining aesthetics. Every
+                        serving is calculated precisely to align directly with your workout schedule and body
+                        recomposition goals.</p>
+
+                    <div class="stats-counter" id="counter-trigger-node">
+                        <div class="stat-box">
+                            <h3 class="counter-number" data-target="12">0</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3 class="counter-number" data-target="15000">0</h3>
+                            <p>Athletes Served</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3 class="counter-number" data-target="98">0</h3>
+                            <p>Clean Recipes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-img-box">
+                    <div class="img-frame"
+                        style="background-image: url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800');">
+                    </div>
+                </div>
+            </div>
+
+            <div class="chefs-block scroll-reveal">
+                <h2 class="section-center-title">Meet Our Fitness Diet Architects</h2>
+                <div class="chefs-grid">
+                    <div class="chef-card">
+                        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=400"
+                            alt="Chef Rohit">
+                        <h4>Chef Rohit Sharma</h4>
+                        <p class="chef-bio">10+ Years experience engineering low-carb ketogenic fuel matrix structures
+                            and macro tracking models.</p>
+                    </div>
+                    <div class="chef-card">
+                        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=400"
+                            alt="Chef Sneha">
+                        <h4>Chef Sneha Iyer</h4>
+                        <p class="chef-bio">Master of micronutrient preservation techniques, cold culinary science and
+                            clean artisan organic vinaigrettes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="menu-section global-bg app-section">
+            <div class="menu-header scroll-reveal">
+                <h2>Our Hyper-Protein Specialized Mega Menu</h2>
+                <p>Every single card represents verified macro properties, accurate calorie distribution, and pristine
+                    food textures.</p>
+            </div>
+
+            <div class="advanced-menu-grid">
+                <div class="dish-card scroll-reveal">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=500" alt="Chicken Dry">
+                    <div class="dish-content">
+                        <h4>Chicken (Dry) <span class="price">₹149</span></h4>
+                        <p>Clean slow-roasted lean tender pieces tossed lightly with basic Himalayan pink salt crystals.
+                        </p>
+                        <button class="btn-primary small-btn" onclick="addToTrackingCart('Chicken (Dry)', 149)">Add To
+                            Live Pipeline</button>
+                    </div>
+                </div>
+                <div class="dish-card scroll-reveal">
+                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=500"
+                        alt="Chicken Salad">
+                    <div class="dish-content">
+                        <h4>Chicken Salad <span class="price">₹190</span></h4>
+                        <p>Gourmet selection of fresh chopped iceberg lettuce topped with pulled high-protein poultry
+                            breast.</p>
+                        <button class="btn-primary small-btn" onclick="addToTrackingCart('Chicken Salad', 190)">Add To
+                            Live Pipeline</button>
+                    </div>
+                </div>
+                <div class="dish-card scroll-reveal">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=500"
+                        alt="Chicken Rice Salad">
+                    <div class="dish-content">
+                        <h4>Chicken Rice Salad <span class="price">₹179</span></h4>
+                        <p>Low glycemic index premium whole basmati base served alongside calibrated chicken dice
+                            frames.</p>
+                        <button class="btn-primary small-btn" onclick="addToTrackingCart('Chicken Rice Salad', 179)">Add
+                            To Live Pipeline</button>
+                    </div>
+                </div>
+                <div class="dish-card scroll-reveal">
+                    <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=500"
+                        alt="Chicken Breast Salad">
+                    <div class="dish-content">
+                        <h4>Chicken Breast Salad <span class="price">₹190</span></h4>
+                        <p>Premium thick muscle-building single-cut chicken fillet on top of locally sourced seasonal
+                            field greens.</p>
+                        <button class="btn-primary small-btn"
+                            onclick="addToTrackingCart('Chicken Breast Salad', 190)">Add To Live Pipeline</button>
+                    </div>
+                </div>
+
+                <div class="dish-card scroll-reveal">
+                    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=500"
+                        alt="Veg Rice Gravy">
+                    <div class="dish-content">
+                        <h4>Veg. Rice (Gravy) <span class="price">₹105</span></h4>
+                        <p>Fiber rich mixed farm veggies boiled gently, layered with brown basmati rice and high-grade
+                            herbal stew.</p>
+                        <button class="btn-primary small-btn" onclick="addToTrackingCart('Veg. Rice (Gravy)', 105)">Add
+                            To Live Pipeline</button>
+                    </div>
+                </div>
+                <div class="dish-card scroll-reveal">
+                    <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=500"
+                        alt="Egg Biryani">
+                    <div class="dish-content">
+                        <h4>Egg Biryani <span class="price">₹119</span></h4>
+                        <p>Aromatic layered traditional basmati rice embedded cleanly with whole farm egg white
+                            chambers.</p>
+                        <button class="btn-primary small-btn" onclick="addToTrackingCart('Egg Biryani', 119)">Add To
+                            Live Pipeline</button>
+                    </div>
+                </div>
+                <div class="dish-card scroll-reveal">
+                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=500"
+                        alt="Egg Rice Salad">
+                    <div class="dish-content">
+                        <h4>Egg Rice Salad <span class="price">₹160</span></h4>
+                        <p>Calculated multi-carb whole wheat rice mixed cleanly with chopped boiled organic poultry egg
+                            components.</p>
+                        <button class="btn-primary small-btn" onclick="addToTrackingCart('Egg Rice Salad', 160)">Add To
+                            Live Pipeline</button>
+                    </div>
+                </div>
+                <div class="dish-card scroll-reveal">
+                    <img src="https://images.unsplash.com/photo-1516685018646-549198525c1b?q=80&w=500"
+                        alt="Chicken Rice Gravy">
+                    <div class="dish-content">
+                        <h4>Chicken Rice (Gravy) <span class="price">₹149</span></h4>
+                        <p>Succulent high-protein shredded chicken bits cooked down into a rich low-fat dynamic spice
+                            reduction gravy.</p>
+                        <button class="btn-primary small-btn"
+                            onclick="addToTrackingCart('Chicken Rice (Gravy)', 149)">Add To Live Pipeline</button>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 3: VEG SALAD - SWEET CORN SALAD CARD (FRESH WORKING IMAGE) -->
+                <div class="dish-card scroll-reveal visible">
+                    <img src="https://images.unsplash.com/photo-1607532941433-304659e8198a?q=80&w=500"
+                        alt="Sweet Corn Salad" style="width: 100%; height: 220px; object-fit: cover; display: block;">
+                    <div class="dish-content">
+                        <h4>Sweet Corn Salad <span class="price">₹85</span></h4>
+                        <p>Juicy fiber-packed golden sweet corn niblets tossed with fresh lemon twist, cucumber and bell
+                            peppers.</p>
+                        <button class="btn-primary small-btn" onclick="addToTrackingCart('Sweet Corn Salad', 85)">Add To
+                            Live Pipeline</button>
+                    </div>
+                </div>
+
+                <div class="dish-card scroll-reveal">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?q=80&w=500"
+                        alt="Sprout with Paneer">
+                    <div class="dish-content">
+                        <h4>Sprout with Paneer <span class="price">₹95</span></h4>
+                        <p>Sprouted raw green moong grains coupled with thick cubes of organic low-fat calcium rich
+                            dairy paneer.</p>
+                        <button class="btn-primary small-btn" onclick="addToTrackingCart('Sprout with Paneer', 95)">Add
+                            To Live Pipeline</button>
+                    </div>
+                </div>
+                <div class="dish-card scroll-reveal">
+                    <img src="https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?q=80&w=500"
+                        alt="Sprout Broccoli">
+                    <div class="dish-content">
+                        <h4>Sprout Broccoli <span class="price">₹129</span></h4>
+                        <p>Antioxidant superfood pairing! Crisp steamed green broccoli crowns merged with highly active
+                            raw sprouts matrix.</p>
+                        <button class="btn-primary small-btn" onclick="addToTrackingCart('Sprout Broccoli', 129)">Add To
+                            Live Pipeline</button>
+                    </div>
+                </div>
+                <div class="dish-card scroll-reveal">
+                    <img src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=500"
+                        alt="Super Veg Salad">
+                    <div class="dish-content">
+                        <h4>Super Veg. Salad <span class="price">₹169</span></h4>
+                        <p>The ultimate micronutrient shield. Lettuce, olives, broccoli, sprouts, paneer, and raw seeds
+                            mixture layout.</p>
+                        <button class="btn-primary small-btn" onclick="addToTrackingCart('Super Veg. Salad', 169)">Add
+                            To Live Pipeline</button>
+                    </div>
+                </div>
+
+                <div class="dish-card scroll-reveal">
+                    <img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?q=80&w=500"
+                        alt="Detoxe Juice">
+                    <div class="dish-content">
+                        <h4>Detoxe Juice <span class="price">₹110</span></h4>
+                        <p>Raw cold-pressed liquid extraction of cucumber, crisp celery, fresh mint leaves to instantly
+                            flush metabolic waste.</p>
+                        <button class="btn-primary small-btn" onclick="addToTrackingCart('Detoxe Juice', 110)">Add To
+                            Live Pipeline</button>
+                    </div>
+                </div>
+                <div class="dish-card scroll-reveal">
+                    <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?q=80&w=500"
+                        alt="Mint Pear Spinach">
+                    <div class="dish-content">
+                        <h4>Mint, Pear, Spinach Juice <span class="price">₹110</span></h4>
+                        <p>Iron dense alkalizing custom green blend constructed to repair arterial cellular tissue and
+                            clean internal blood tracks.</p>
+                        <button class="btn-primary small-btn"
+                            onclick="addToTrackingCart('Mint Pear Spinach Juice', 110)">Add To Live Pipeline</button>
+                    </div>
+                </div>
+                <div class="dish-card scroll-reveal">
+                    <img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?q=80&w=500"
+                        alt="Protein Shake">
+                    <div class="dish-content">
+                        <h4>Protein Scoop with Banana & Milk <span class="price">₹150</span></h4>
+                        <p>Post-workout anabolic booster channel. 1 pure scoop of ultra-filtered isolate whey paired
+                            with potassium fruit carbohydrates.</p>
+                        <button class="btn-primary small-btn"
+                            onclick="addToTrackingCart('Protein Scoop with Banana', 150)">Add To Live Pipeline</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="catering" class="catering-section global-bg app-section">
+            <div class="catering-wrapper scroll-reveal">
+                <span class="tagline">LUXURY HOSPITALITY</span>
+                <h2>Our High-Fidelity Fitness Catering Solutions</h2>
+                <p>Bringing our absolute exact nutritional metric calculations and raw ingredient counters directly into
+                    your major private networks.</p>
+
+                <div class="catering-grid">
+                    <div class="catering-card">
+                        <div class="cat-icon-frame"><i class="fas fa-dumbbell"></i></div>
+                        <h3>Gym & Athlete Conventions</h3>
+                        <p>We deploy full-scale live protein customization counters and specialized macro-calculated
+                            salad serving lanes for bodybuilding championships or weightlifting community meetups.</p>
+                    </div>
+                    <div class="catering-card">
+                        <div class="cat-icon-frame"><i class="fas fa-building"></i></div>
+                        <h3>Corporate Health Seminars</h3>
+                        <p>Swap out oily heavy traditional foods for high-vibrancy low GI energy foods, organic cold
+                            presses and clean snacks to keep board members highly reactive during long data meetings.
+                        </p>
+                    </div>
+                    <div class="catering-card">
+                        <div class="cat-icon-frame"><i class="fas fa-heartbeat"></i></div>
+                        <h3>Private Fitness Events</h3>
+                        <p>Personalized birthday parties, outdoor running clubs or marathons setups where every
+                            individual meal profile is coded to meet guest specific caloric profiles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery-section global-bg app-section">
+            <h2 class="section-center-title scroll-reveal">Visual Ambiance Gallery</h2>
+            <div class="gallery-grid scroll-reveal">
+                <div class="gal-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=500');">
+                    <span>Premium Interior</span>
+                </div>
+                <div class="gal-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=500');">
+                    <span>Macro Prep Setup</span>
+                </div>
+                <div class="gal-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1463936575829-25148e1db1b8?q=80&w=500');">
+                    <span>Exotic Air-Purifying Cafe Plants</span>
+                </div>
+                <div class="gal-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=500');">
+                    <span>Aesthetic Lighting Vibe</span>
+                </div>
+            </div>
+
+            <h2 class="section-center-title scroll-reveal" style="margin-top: 80px;">The Health Freak Editorial Logs
+            </h2>
+            <div class="blog-grid scroll-reveal">
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?q=80&w=400" alt="Blog 1">
+                    <div class="blog-info">
+                        <h4>Why Clean Steamer Broccoli Accelerates Tissue Recovery</h4>
+                        <p>Uncovering complex cellular compounds that trigger fast metabolic absorption rates right
+                            after intensive hypertrophy sessions...</p>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?q=80&w=400" alt="Blog 2">
+                    <div class="blog-info">
+                        <h4>Tracking Water Retention vs Intramuscular Mineral Densities</h4>
+                        <p>An exhaustive biological framework breakdown highlighting why basic raw kosher salts
+                            outperform generic manufactured artificial processing powders...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tracking" class="tracking-section global-bg app-section">
+            <div class="billing-control-grid scroll-reveal">
+
+                <div class="user-panel-box">
+                    <h3>Active Client Checkout Screen</h3>
+                    <div id="cartStatusText"
+                        style="margin: 20px 0; color: #888; font-size: 1.1rem; border-left: 3px solid var(--accent-orange); padding-left: 15px;">
+                        Cart Status Empty. Scroll up to 'Mega Menu' section and click 'Add To Live Pipeline' on any
+                        high-protein item.
+                    </div>
+
+                    <div id="checkoutFields" style="display:none; transition: opacity 0.5s ease;">
+                        <div class="input-row">
+                            <input type="text" id="deliveryAddress"
+                                placeholder="Provide Complete Street Address & Landmark" required>
+                        </div>
+                        <label
+                            style="display:block; margin-bottom:8px; font-weight:600; color:var(--accent-orange);">Select
+                            Payment Framework:</label>
+                        <select id="paymentSelector" class="wide-select">
+                            <option value="UPI Pay / Dynamic QR Link Ready">Dynamic Instant UPI (GPay / Paytm App
+                                Trigger Link)</option>
+                            <option value="Secure Visa/Mastercard Node">Secure Visa / Mastercard Checkout Route</option>
+                            <option value="Cash On Delivery Post-Workout">Cash On Delivery (COD)</option>
+                        </select>
+                        <button class="btn-primary wide" onclick="processFinalCheckout()">Dispatch Order
+                            Instantly</button>
+                    </div>
+
+                    <div class="live-tracker-widget" id="liveTrackerUI" style="display:none;">
+                        <h4>Real-Time Shipping Status Terminal (Frontend View)</h4>
+                        <div class="track-nodes">
+                            <div class="node" id="node-received"><span>1</span>
+                                <p>Order Logged</p>
+                            </div>
+                            <div class="node" id="node-preparing"><span>2</span>
+                                <p>Chef Assembling</p>
+                            </div>
+                            <div class="node" id="node-transit"><span>3</span>
+                                <p>Rider Dispatched</p>
+                            </div>
+                        </div>
+                        <div class="delivery-time-countdown">Estimated Counter Countdown: <span
+                                id="countdownTimerText">Calculating parameters...</span></div>
+                    </div>
+                </div>
+
+                <div class="owner-panel-box">
+                    <div class="badge-live"><i class="fas fa-server"></i> CAFE BACKEND LIVE DATABASE EMULATOR (SYSTEM
+                        TERMINAL)</div>
+                    <p style="font-size:0.85rem; color:#6688aa; margin-bottom:15px;">Logs system packets automatically
+                        upon user input sequence.</p>
+                    <div class="terminal-log-screen" id="ownerTerminalScreen">[SYSTEM STATUS SECURE] Awaiting incoming
+                        checkout or booking payloads...</div>
+
+                    <div id="ownerActionControls" style="display:none; margin-top:20px; gap:12px; flex-wrap:wrap;">
+                        <button class="btn-primary"
+                            onclick="advanceSimulatedStatus('preparing', 'Chef Rohit Accepted Payload! Preparation compilation commenced inside clean room.')">Accept
+                            & Start Cooking</button>
+                        <button class="btn-primary" style="background:#00aa55;"
+                            onclick="advanceSimulatedStatus('transit', 'Insulated logistics unit loaded. Delivery executive dispatched into route grid.')">Mark
+                            Out For Delivery</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section global-bg app-section">
+            <div class="contact-split-grid scroll-reveal">
+
+                <div class="contact-info-block">
+                    <span class="tagline">GET IN TOUCH</span>
+                    <h2>Visit The Sanctuary</h2>
+                    <p>Have an explicit custom meal distribution request, catering inquiry, or want to report local
+                        macro variance? Message us directly.</p>
+
+                    <div class="contact-details-list">
+                        <div class="c-detail-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <div>
+                                <h4>Physical Address</h4>
+                                <p>Plot No. 42, Elite Fitness Galleria, Ground Floor, Sector 15, Connaught Place Block,
+                                    New Delhi, Delhi 110001</p>
+                            </div>
+                        </div>
+                        <div class="c-detail-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Call Terminal</h4>
+                                <p>+91 98765 43210</p>
+                            </div>
+                        </div>
+                        <div class="c-detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Digital Mail Matrix</h4>
+                                <p>support@healthfreakcafe.com</p>
+                            </div>
+                        </div>
+                        <div class="c-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Operational Hours Grid</h4>
+                                <p>9:00 AM – 11:00 PM (Mon-Sun Open)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="google-map-wrapper"
+                        style="margin-top: 35px; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 15px 35px rgba(0,0,0,0.4); height: 260px;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9936985440264!2d77.2166687!3d28.6300435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b7495a73%3A0x5ca691fc964efc56!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi%20110001!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                            width="100%" height="100%" style="border:0; filter: grayscale(1) invert(1) contrast(1.2);"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-dowind">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="contact-form-block">
+                    <h3>Book A Table Reservation Slot</h3>
+                    <form id="tableBookingForm" onsubmit="executeTableBooking(event)">
+                        <div class="input-row">
+                            <input type="text" id="bookName" placeholder="Client Name" required>
+                            <input type="tel" id="bookPhone" placeholder="Mobile Coordinate Number" required>
+                        </div>
+                        <div class="input-row">
+                            <input type="date" required>
+                            <select id="bookSeats" onchange="calculateTableDeposit()">
+                                <option value="Solo Gym Athlete">1 Seat (Solo Gym Athlete)</option>
+                                <option value="Training Partners Squad">2 Seats (Training Partners Squad)</option>
+                                <option value="Fitness Family Network">4+ Seats (Fitness Family Network)</option>
+                            </select>
+                        </div>
+
+                        <div class="booking-payment-wrapper"
+                            style="margin-top: 15px; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 20px;">
+                            <label
+                                style="display:block; margin-bottom:10px; font-weight:600; color:var(--accent-orange); font-size: 0.95rem;">
+                                Booking Deposit Framework (Refundable on visit): <span id="depositAmountDisplay"
+                                    style="color:#fff; font-weight:800;">₹100</span>
+                            </label>
+                            <select id="bookingPaymentSelector" class="wide-select" style="margin-bottom: 20px;">
+                                <option value="Instant UPI Node (GPay/PhonePe)">Instant UPI Gateway (Scanner App
+                                    Trigger)</option>
+                                <option value="Credit/Debit Premium Network">Credit/Debit Card Terminal</option>
+                                <option value="Pay directly at Cafe Counter on arrival">Pay 100% Directly at Cafe
+                                    Counter on Arrival</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn-primary wide">Secure Table Slot & Proceed</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <div class="notification-toast-overlay" id="globalToastBox">
+        <i class="fas fa-check-circle"></i> <span id="toastMessage">Operational packet routing verified!</span>
+    </div>
+
+    <footer class="premium-footer">
+        <p>&copy; 2026 My Health Freak Cafe | Developed In Pure High Fidelity Raw Code Construction. All Rights
+            Reserved.</p>
+    </footer>
+
+    <script>
+        // --- MULTI-PAGE & SCROLL ROUTER ARCHITECTURE ---
+        let isMultiPageView = false;
+
+        function switchView(sectionId) {
+            isMultiPageView = true;
+
+            document.querySelectorAll('.app-section').forEach(section => {
+                if (section.id === sectionId) {
+                    section.style.display = 'flex'; // Hero Section ke liye flex active rakhega
+                    if (sectionId !== 'home') section.style.display = 'block'; // Baaki sections ke liye block reset
+
+                    // FIX: Is section ke andar jitne bhi 'scroll-reveal' elements hain, unhe instantly visible kar do!
+                    section.classList.add('visible');
+                    section.querySelectorAll('.scroll-reveal').forEach(el => {
+                        el.classList.add('visible');
+                    });
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+
+            if (sectionId === 'about') {
+                fireIncrementalCounters();
+            }
+
+            document.querySelectorAll('.nav-link-item').forEach(link => {
+                if (link.getAttribute('href') === `#${sectionId}`) {
+                    link.style.background = 'rgba(255, 122, 0, 0.25)';
+                    link.style.color = '#fff';
+                } else {
+                    link.style.background = 'transparent';
+                    link.style.color = '#b0b5c0';
+                }
+            });
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showAllSections() {
+            isMultiPageView = false;
+
+            document.querySelectorAll('.app-section').forEach(section => {
+                if (section.id === 'home') {
+                    section.style.display = 'flex';
+                } else {
+                    section.style.display = 'block';
+                }
+                section.classList.add('visible');
+            });
+
+            document.querySelectorAll('.nav-link-item').forEach(link => {
+                link.style.background = 'transparent';
+                link.style.color = '#b0b5c0';
+            });
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            renderToast("Switched to Continuous Unified Long-Scroll Mode!");
+        }
+
+        function calculateTableDeposit() {
+            const seats = document.getElementById('bookSeats').value;
+            const display = document.getElementById('depositAmountDisplay');
+            if (seats === "Solo Gym Athlete") display.innerText = "₹100";
+            else if (seats === "Training Partners Squad") display.innerText = "₹200";
+            else display.innerText = "₹500";
+        }
+
+        // BACKGROUND WALLPAPER CROSSFADE SCHEDULER
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.bg-carousel .slide');
+        setInterval(() => {
+            if (slides.length === 0) return;
+            slides[slideIndex].classList.remove('active');
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].classList.add('active');
+        }, 3000);
+
+        // INTERSECTION OBSERVER ENGINE (Keval tab kaam karega jab user scroll mode me hoga)
+        const revealConfig = { threshold: 0.05, rootMargin: "0px 0px -50px 0px" };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (isMultiPageView) return; // Agar specific view me hain toh scroll observer ko bypass karo
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    if (entry.target.querySelector('#counter-trigger-node') || entry.target.id === 'about') {
+                        fireIncrementalCounters();
+                    }
+                }
+            });
+        }, revealConfig);
+
+        document.querySelectorAll('.scroll-reveal').forEach(node => observer.observe(node));
+
+        // AUTO COUNTER INCREMENTS LOGIC
+        let executionBlocker = false;
+        function fireIncrementalCounters() {
+            if (executionBlocker) return;
+            executionBlocker = true;
+
+            document.querySelectorAll('.counter-number').forEach(item => {
+                const limit = +item.getAttribute('data-target');
+                const iterationSpeed = Math.max(1, Math.ceil(limit / 40));
+
+                const process = () => {
+                    const currentVal = +item.innerText.replace('+', '');
+                    if (currentVal < limit) {
+                        item.innerText = Math.min(limit, currentVal + iterationSpeed);
+                        setTimeout(process, 30);
+                    } else {
+                        item.innerText = limit + "+";
+                    }
+                };
+                process();
+            });
+        }
+
+        // TOAST UI FRAME UTILITY SYSTEM
+        function renderToast(messageText) {
+            const toast = document.getElementById('globalToastBox');
+            document.getElementById('toastMessage').innerText = messageText;
+            toast.classList.add('show-toast');
+            setTimeout(() => toast.classList.remove('show-toast'), 4000);
+        }
+
+        // ADVANCED TABLE RESERVATION WITH PAYMENT CONTROL HANDSHAKE
+        function executeTableBooking(e) {
+            e.preventDefault();
+            const client = document.getElementById('bookName').value;
+            const size = document.getElementById('bookSeats').value;
+            const gateway = document.getElementById('bookingPaymentSelector').value;
+            const amount = document.getElementById('depositAmountDisplay').innerText;
+
+            const screen = document.getElementById('ownerTerminalScreen');
+            screen.innerHTML = `[INCOMING RESERVATION PAYLOAD - TABLE LOCKED]\n----------------------------------------------------\nClient Identifier Name: ${client}\nSeating Config Matrix: ${size}\nSelected Payment Route: ${gateway}\nTransaction Value: ${amount}\n\n[SYSTEM STATUS]: Table confirmation logs generated. Reservation secured successfully.`;
+
+            if (isMultiPageView) {
+                switchView('tracking');
+            } else {
+                document.getElementById('tracking').scrollIntoView({ behavior: 'smooth' });
+            }
+
+            renderToast(`Table Secured! Payment via [${gateway}] simulated.`);
+            alert(`[HEALTH FREAK CAFE - TABLE RESERVATION TRANSACTION NODE]\n\nHello ${client}!\nYour reservation slot request for "${size}" has been verified.\n\nTransaction Status: Processing ${amount} via ${gateway}.\n\nCheck the System Database Terminal screen to view your active booking logs layout!`);
+            document.getElementById('tableBookingForm').reset();
+            document.getElementById('depositAmountDisplay').innerText = "₹100";
+        }
+
+        // PIPELINE TRACKER ARCHITECTURE 
+        let globalSelectedCartItem = null;
+
+        function addToTrackingCart(name, pricing) {
+            globalSelectedCartItem = { item: name, cost: pricing };
+            const textBlock = document.getElementById('cartStatusText');
+            textBlock.innerHTML = `Selected Fuel Target: <strong>${name}</strong><br>Invoiced Payable: <strong>₹${pricing}</strong>`;
+            document.getElementById('checkoutFields').style.display = "block";
+
+            if (isMultiPageView) {
+                switchView('tracking');
+            } else {
+                document.getElementById('tracking').scrollIntoView({ behavior: 'smooth' });
+            }
+            renderToast(`${name} loaded inside pipeline!`);
+        }
+
+        function processFinalCheckout() {
+            const deliveryLocation = document.getElementById('deliveryAddress').value;
+            const gatewayMethod = document.getElementById('paymentSelector').value;
+
+            if (!deliveryLocation) {
+                alert("Critical Error: Delivery target node destination point cannot remain blank.");
+                return;
+            }
+
+            const screen = document.getElementById('ownerTerminalScreen');
+            screen.innerHTML = `[INCOMING PAYLOAD PACKET RECOGNIZED - ACTIVE ORDER DISPATCH]\n----------------------------------------------------\nOrdered Target Meal: ${globalSelectedCartItem.item}\nFinal Invoice Amount: ₹${globalSelectedCartItem.cost}\nTarget Drop Coordinates: ${deliveryLocation}\nChosen Gateway Node: ${gatewayMethod}\n\n[SYSTEM STATUS]: Awaiting owner authorization switch to accept packet...`;
+
+            document.getElementById('ownerActionControls').style.display = "flex";
+            document.getElementById('liveTrackerUI').style.display = "block";
+
+            document.querySelectorAll('.track-nodes .node').forEach(n => n.classList.remove('active'));
+            document.getElementById('node-received').classList.add('active');
+            document.getElementById('countdownTimerText').innerText = "35 Mins (Calculating Route)";
+
+            renderToast("Order structural payload transmitted securely!");
+        }
+
+        function advanceSimulatedStatus(nodeId, descriptionMessage) {
+            document.getElementById(`node-${nodeId}`).classList.add('active');
+            if (nodeId === 'preparing') {
+                document.getElementById('countdownTimerText').innerText = "22 Mins (Chef Assembling Components)";
+            } else if (nodeId === 'transit') {
+                document.getElementById('countdownTimerText').innerText = "8 Mins (Rider Sprinting)";
+            }
+            const screen = document.getElementById('ownerTerminalScreen');
+            screen.innerHTML += `\n\n[STATE EMULATION TRANSITION SUCCESS]:\n-> ${descriptionMessage}`;
+            renderToast("State altered. User interface updated live!");
+        }
+    </script>
+</body>
+
+</html>
