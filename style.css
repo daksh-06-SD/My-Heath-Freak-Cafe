@@ -248,3 +248,174 @@ body {
     .about-text h2, .menu-header h2, .catering-wrapper h2, .section-center-title { font-size: 2.6rem; }
     .about-img-box .img-frame { height: 380px; }
 }
+/* ==========================================================================
+   RESPONSIVE DESIGN SYSTEM (MOBILE & TABLET FRIENDLY RULES)
+   ========================================================================== */
+
+/* --- TABLET BREAKPOINT (Screens smaller than 1024px) --- */
+@media screen and (max-width: 1024px) {
+    .navbar-container {
+        padding: 15px;
+    }
+    .nav-links {
+        gap: 5px;
+    }
+    .nav-link-item {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+    .glow-text {
+        font-size: 2.8rem;
+    }
+    .about-grid, .contact-split-grid {
+        grid-template-columns: 1fr; /* 2 columns se badal kar 1 column kiya */
+        gap: 40px;
+    }
+    .about-img-box .img-frame {
+        height: 380px;
+    }
+    .catering-grid {
+        grid-template-columns: repeat(2, 1fr); /* 3 se badal kar 2 kiya */
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 4 se badal kar 2 kiya */
+    }
+    .billing-control-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- MOBILE PHONE BREAKPOINT (Screens smaller than 768px) --- */
+@media screen and (max-width: 768px) {
+    /* Fixed Header aur Navigation ko touch-friendly aur stack banaya */
+    .header-fixed {
+        position: relative; /* Mobile par scroll thik chalne ke liye status change */
+    }
+    .navbar-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    .nav-link-item {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+        background: rgba(255,255,255,0.02);
+    }
+    .action-btn {
+        width: 100%;
+    }
+    .action-btn .btn-primary {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Hero Section Reset */
+    .hero-section {
+        height: auto;
+        padding: 120px 20px;
+    }
+    .glow-text {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    .hero-container p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+    .hero-cta-box {
+        flex-direction: column; /* Buttons ek ke niche ek aayenge */
+        gap: 12px;
+    }
+    .hero-cta-box .btn-primary, .hero-cta-box .btn-secondary {
+        width: 100%;
+    }
+
+    /* About, Chefs, Menu Grids Content Formatting */
+    .global-bg {
+        padding: 60px 0;
+    }
+    .section-center-title, .about-text h2, .menu-header h2, .catering-wrapper h2, .contact-info-block h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .about-grid {
+        padding: 0 20px;
+    }
+    .stats-counter {
+        flex-direction: column; /* Counters stack vertically */
+        gap: 20px;
+        text-align: center;
+    }
+    .chefs-grid {
+        grid-template-columns: 1fr; /* Single column for profile cards */
+        padding: 0 20px;
+    }
+    .chef-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Menu Cards Alignment */
+    .advanced-menu-grid {
+        grid-template-columns: 1fr; /* Mobile par ek line me ek hi food card dikhega bina compress hue */
+        padding: 0 20px;
+    }
+    .dish-card img {
+        height: 200px;
+    }
+
+    /* Catering & Blogs Layout Stack */
+    .catering-grid, .blog-grid, .gallery-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    .blog-card {
+        flex-direction: column;
+    }
+    .blog-card img {
+        width: 100%;
+        height: 180px;
+    }
+
+    /* Billing Terminal Console & Inputs Adjustments */
+    .billing-control-grid {
+        padding: 0 20px;
+    }
+    .user-panel-box, .owner-panel-box, .contact-form-block {
+        padding: 20px;
+    }
+    .input-row {
+        flex-direction: column; /* Saare textboxes aur selectors full width ho jayenge */
+        gap: 12px;
+    }
+    .track-nodes {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .track-nodes::before {
+        display: none; /* Mobile par connectors line hide kari */
+    }
+    .node {
+        width: 100%;
+    }
+
+    /* Contact Details List & Interactive Map Frame */
+    .contact-split-grid {
+        padding: 0 20px;
+    }
+    .c-detail-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .google-map-wrapper {
+        height: 220px;
+    }
+}
